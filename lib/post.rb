@@ -13,13 +13,6 @@ class Post
     @@all 
   end 
   
-  def title 
-    @title 
-  end 
-  
-  def author 
-  end 
-  
   def author_name
     if (self.author != nil)
       return self.author.name
