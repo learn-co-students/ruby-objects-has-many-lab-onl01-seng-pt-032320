@@ -7,6 +7,7 @@ class Artist
 
   def songs
     songs = []
+    songs < Song.new
   end
 
 end
