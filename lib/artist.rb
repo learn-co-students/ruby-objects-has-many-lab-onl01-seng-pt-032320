@@ -9,7 +9,7 @@ class Artist
   end
   
   def songs
-    binding.pry
+    #binding.pry
   end
   
   def add_song(song_obj)

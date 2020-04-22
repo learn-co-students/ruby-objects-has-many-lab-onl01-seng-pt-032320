@@ -9,8 +9,12 @@ class Post
     @@all << self
   end
   
+  def self.all
+    @@all
+  end
+  
   def author_name
-    #binding.pry
+    self.author.name if self.author
   end
   
 end
