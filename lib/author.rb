@@ -1,14 +1,24 @@
+require 'pry'
 class Author
-  attr_accessor :name, :posts
+  attr_accessor :name
   
   def initialize(name)
     @name = name
-    @posts = []
+  end
+  def posts
+    Post.all.select{|post_obj| post_obj.author == self}
   end
   
   def add_post(post_obj)
-    @posts << post_obj
-    @posts.posts = self
+    post_obj.author = self
   end
   
+  def add_post_by_title(title)
+    post = Post.new(title)
+    add_post(post)
+  end
+  
+  def self.post_count
+    Post.all.count{|post_obj| post_obj.author}
+  end
 end
