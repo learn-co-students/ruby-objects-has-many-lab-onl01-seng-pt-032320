@@ -11,10 +11,10 @@ class Song
   end
   
   def self.all
-    @@all.collect { |song| song.name}
+    @@all
   end
   
   def artist_name
-    self.artist.name
+    self.artist.name if self.artist
   end
 end
