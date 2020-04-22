@@ -10,8 +10,11 @@ class Song
     @@all << self
   end
   
+  def self.all
+    @@all.collect { |song| song.name}
+  end
+  
   def artist_name
     self.artist.name
-    #binding.pry
   end
 end
