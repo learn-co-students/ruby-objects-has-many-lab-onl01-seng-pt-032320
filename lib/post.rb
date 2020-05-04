@@ -14,12 +14,12 @@ end
 #^This class method displays all post instances in an array from @@all on line 6 above
 
 def author_name
-
-
-
+if self.author
+  author.name
+else
+  nil
 end
 
-
-
+end
 
 end
